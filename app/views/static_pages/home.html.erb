@@ -7,3 +7,8 @@ Website.
 </h2>
 <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
+<% @users.each do |user| %>
+    <ul>
+        <li><%= user.username %></li>
+    </ul>
+<% end %>
