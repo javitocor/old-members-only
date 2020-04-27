@@ -1,12 +1,12 @@
 <%= form_for @user do |f| %>
             <%= render 'errors', object: @user %>
-            <%= f.label :username %>
-            <%= f.text_field :username, class: 'form-control'  %></br>
-            <%= f.label :email %>
-            <%= f.text_field :email, class: 'form-control'  %></br>
-            <%= f.label :password %>
-            <%= f.password_field :password, class: 'form-control'  %></br>
-            <%= f.label :password_confirmation %>
-            <%= f.password_field :password_confirmation, class: 'form-control'  %></br>
+            <%= f.label :username, 'Choose a Username' %></br>
+            <%= f.text_field :username, placeholder: "Your username here", class: 'form-control'  %></br>
+            <%= f.label :email, 'Add your Email' %></br>
+            <%= f.text_field :email, placeholder: "Your email here", class: 'form-control'  %></br>
+            <%= f.label :password, 'Your Password' %></br>
+            <%= f.password_field :password, placeholder: "Your password here", class: 'form-control'  %></br>
+            <%= f.label :password_confirmation, 'Re-type your Password' %></br>
+            <%= f.password_field :password_confirmation, placeholder: "Your password confirmation here", class: 'form-control'  %></br>
             <%= f.submit "Create" %>
 <% end %>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OldMembersOnly</title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,7 +13,9 @@
     <% flash.each do |message_type, message| %>
             <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
     <% end %>
+    <%= render 'layouts/header'%>
     <%= yield %>
     <%= debug(params) if Rails.env.development? %>
+    <%= render 'layouts/footer'%>
   </body>
 </html>
