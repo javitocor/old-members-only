@@ -1,2 +1,22 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<% provide(:title, 'New Post') %>
+<h1>New Post</h1>
+<%= form_for @post do |f| %>
+            <% if @post.errors.any? %>
+                <div id="error_explanation">
+                <div class="alert alert-danger">
+                    The form contains <%= pluralize(@post.errors.count, "error") %>.
+                </div>
+                <ul>
+                    <% @post.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                </ul>
+                </div>
+            <% end %>
+            <%= f.label :title, 'Choose a Title' %></br>
+            <%= f.text_field :title, placeholder: "Your title here", class: 'form-control'  %></br>
+            <%= f.label :content, 'Write your post' %></br>
+            <%= f.text_area :content, size: "30x10" , placeholder: "Your post here", class: 'form-control'  %></br>
+            <%= f.hidden_field :user_id, :value => current_user.id %>
+            <%= f.submit "Create" %>
+<% end %>

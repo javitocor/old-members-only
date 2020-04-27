@@ -1,2 +1,8 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<% provide(:title, 'Post Index') %>
+<h1>All posts</h1>
+<% @posts.each do |post| %>
+    <%= link_to post.title, post %>
+    <%= post.content %>
+<% end %>
+
+<%= link_to 'Home', root_path %>
