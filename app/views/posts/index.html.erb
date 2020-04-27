@@ -1,8 +1,11 @@
 <% provide(:title, 'Post Index') %>
 <h1>All posts</h1>
-<% @posts.each do |post| %>
-    <%= link_to post.title, post %>
-    <%= post.content %>
+<% @posts.each do |post| %>    
+        <h3><%= post.title %></h3></br>
+        <% if logged_in? %>
+         <span><%= post.user.username %></span> 
+        <% end %>
+        <p><%= post.content %></p></br>    
 <% end %>
 
 <%= link_to 'Home', root_path %>
