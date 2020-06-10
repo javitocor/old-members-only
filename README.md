@@ -1,24 +1,79 @@
-# README
+# Old Members Only
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This project it was built following the requirements of the project in The Odin Project.
 
-Things you may want to cover:
+## What it does
 
-* Ruby version
+Exclusive club for gossips where guests can see all the posts but only the logged users can see the owner of the post.
 
-* System dependencies
+## Built With
 
-* Configuration
+- Ruby v2.6.5
+- Ruby on Rails v5.2.4
 
-* Database creation
+## Getting Started
 
-* Database initialization
+To get a local copy up, clone it and running follow these simple example steps.
 
-* How to run the test suite
+### Prerequisites
 
-* Services (job queues, cache servers, search engines, etc.)
+- Ruby
+- Rails
 
-* Deployment instructions
+### Setup
 
-* ...
+Install gems with:
+
+``` bash
+bundle install
+```
+
+Setup database with:
+
+``` bash
+   rails db:migrate
+```
+
+### Usage
+
+Start server with:
+
+``` bash
+    rails server
+```
+
+Open `http://localhost:3000/` in your browser.
+
+
+## Author
+
+👤 **Javier Oriol Correas Sanchez Cuesta**
+
+- Github: [@javitocor](https://github.com/javitocor)
+- Twitter: [@JavierCorreas4](https://twitter.com/JavierCorreas4)
+- Linkedin: [Javier Oriol Correas Sanchez Cuesta](https://www.linkedin.com/in/javier-correas-sanchez-cuesta-15289482/)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome! Start by:
+
+- Forking the project.
+- Cloning the project to your local machine.
+- cd into the project directory.
+- Run git checkout -b your-branch-name.
+- Make your contributions.
+- Push your branch up to your forked repository.
+- Open a Pull Request with a detailed description to the development branch of the original project for a review.
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- The Odin Project
+
+## 📝 License
+
+No license.
